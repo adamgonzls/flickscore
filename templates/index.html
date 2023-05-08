@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}FlickScore{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>FlickScore 📽</h1>
+  {% for movie in movies %}
+    <ul>
+      <li>
+        <div>
+          <h3>Front of card</h3>
+          {{ movie.title }} {{ movie.rating }}
+        </div>
+        <div>
+          <h3>Back of card</h3>
+          {{ movie.description }}
+        </div>
+      </li>
+    </ul>
+  {% endfor %}
+  <p>Want to work in a cafe but need power and wifi?</p>
+  <p>You've found the right place! Checkout my collection of cafes with data on power socket availability, wifi speed and coffee quality.</p>
+</div>
+
+{% endblock %}
