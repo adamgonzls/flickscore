@@ -13,6 +13,7 @@ A movie rating app
 - Jinja
 - WTForms
 - SQLite
+- Bootstrap
 
 ## 🧞 Commands
 

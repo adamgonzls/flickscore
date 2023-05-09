@@ -14,11 +14,14 @@
         </div>
         <div>
           <h3>Back of card</h3>
-          {{ movie.description }}
+          <p>Description: {{ movie.description }}</p>
+          <p>Rating: {{ movie.rating }}</p>
+          <a href="/edit/{{ movie.id }}">Update</a><a href="">Delete</a>
         </div>
       </li>
     </ul>
   {% endfor %}
+
   <p>Want to work in a cafe but need power and wifi?</p>
   <p>You've found the right place! Checkout my collection of cafes with data on power socket availability, wifi speed and coffee quality.</p>
 </div>
