@@ -4,9 +4,14 @@
 
 {% block content %}
 <div class="container">
-  <h2>{{movie.title}}</h2>
-  <p>The id is {{movie.id}}</p>
-  {{ render_form(form, novalidate=True) }}
+    <h2>{{movie.title}}</h2>
+    <p class="mb-0">Your current rating: </p>
+    <h2>{{movie.rating}}</h2>
+    {% if movie.review %}
+        <p class="mb-0">Your previous review:</p>
+        <h2>{{movie.review}}</h2>
+    {% endif %}
+    {{ render_form(form, novalidate=True) }}
 </div>
 
 {% endblock %}

@@ -16,7 +16,8 @@
             <h3>Back of card</h3>
             <p>Description: {{ movie.description }}</p>
             <p>Rating: {{ movie.rating }}</p>
-            <a class="btn btn-primary" href="{{ url_for('edit_movie', id=movie.id) }}">Update</a><a class="btn btn-danger" href="">Delete</a>
+            <a class="btn btn-primary" href="{{ url_for('edit_movie', id=movie.id) }}">Update</a>
+            <a class="btn btn-danger" href="">Delete</a>
           </div>
         </li>
       </ul>

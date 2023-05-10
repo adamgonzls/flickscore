@@ -5,6 +5,7 @@
 {% block content %}
 <div class="container">
   <h2>Add a movie</h2>
+  {{ render_form(form, novalidate=True) }}
 </div>
 
 {% endblock %}

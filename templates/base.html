@@ -17,13 +17,15 @@
         {% endblock %}
     </head>
     <body>
-        <h1><a class="text-decoration-none" href="{{ url_for('home') }}">FlickScore 📽</a></h1>
-        <!-- Your page content -->
-        {% block content %}{% endblock %}
+        <div class="p-2">
+            <h1><a class="text-decoration-none" href="{{ url_for('home') }}">FlickScore 📽</a></h1>
+            <!-- Your page content -->
+            {% block content %}{% endblock %}
 
-        {% block scripts %}
-            <!-- Optional JavaScript -->
-            {{ bootstrap.load_js() }}
-        {% endblock %}
+            {% block scripts %}
+                <!-- Optional JavaScript -->
+                {{ bootstrap.load_js() }}
+            {% endblock %}
+        </div>
     </body>
 </html>
