@@ -4,8 +4,9 @@
 
 {% block content %}
 <div class="container">
-  <h1>FlickScore 📽</h1>
-
+  <h2>{{movie.title}}</h2>
+  <p>The id is {{movie.id}}</p>
+  {{ render_form(form, novalidate=True) }}
 </div>
 
 {% endblock %}
