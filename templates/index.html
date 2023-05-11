@@ -5,23 +5,23 @@
 {% block content %}
 <div class="container">
   {% if movies %}
+    <ul class="list-unstyled w-50 mx-auto">
     {% for movie in movies %}
-      <ul class="list-unstyled">
-        <li class="card">
-          <div style="background-image: url({{ movie.img_url }})">
-            <h3>Front of card</h3>
-            {{ movie.title }} {{ movie.rating }}
-          </div>
-          <div>
-            <h3>Back of card</h3>
-            <p>Description: {{ movie.description }}</p>
-            <p>Rating: {{ movie.rating }}</p>
-            <a class="btn btn-primary" href="{{ url_for('edit_movie', id=movie.id) }}">Update</a>
-            <a class="btn btn-danger" href="{{ url_for('delete_movie', id=movie.id) }}">Delete</a>
-          </div>
+        <li class="card bg-dark text-white">
+            <img src="{{ movie.img_url }}" alt="{{ movie.title }}" class="card-img">
+            <div class="card-img-overlay p-0">
+                <h2 class="card__data--bg p-3">{{ movie.title }}</h2>
+                <span class="card__data--bg p-3">{{ movie.rating }}</span>
+            </div>
+            <div class="p-3">
+                <p>Description: {{ movie.description }}</p>
+                <p>Rating: {{ movie.rating }}</p>
+                <a class="btn btn-primary" href="{{ url_for('edit_movie', id=movie.id) }}">Update</a>
+                <a class="btn btn-danger" href="{{ url_for('delete_movie', id=movie.id) }}">Delete</a>
+            </div>
         </li>
-      </ul>
     {% endfor %}
+    </ul>
   {% else %}
     <p>Start scoring some flicks!</p>
   {% endif %}

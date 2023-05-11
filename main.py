@@ -42,6 +42,7 @@ with app.app_context():
 @app.route("/", methods=["GET", "POST"])
 def home():
     all_movies = db.session.query(Movie).all()
+    all_movies = db.session.query(Movie).order_by(Movie.rating.desc()).all()
     return render_template("index.html", movies=all_movies)
 
 

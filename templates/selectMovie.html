@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container">
-    <p>Movies appear here ~~></p>
+    <h2>Select Movie</h2>
     <ul class="list-unstyled">
     {% for movie in movies %}
         <li><a href="{{ url_for('find_movie', movie_id = movie.id) }}">{{movie.original_title}} - {{movie.release_date}}</a></li>
